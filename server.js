@@ -23,7 +23,7 @@ api.get('/messages',(req,res)=> {
 
 api.post('/messages',(req,res)=> {
     messages.push(req.body);
-    res.sendStatus(200);
+    res.json(req.body);
 })
 
 app.use('/api',api);
